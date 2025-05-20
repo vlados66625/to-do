@@ -1,14 +1,9 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+'use client';
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+import { createGlobalStyle } from 'styled-components';
+import { colorGraniteGrey, colorWhiteSmoke } from '../../const/const-colors';
+
+export const GlobalStyle = createGlobalStyle`
 
 html,
 body {
@@ -17,9 +12,10 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-rubik-sans);
+  margin: 0;
+  color: ${colorGraniteGrey};
+  background: ${colorWhiteSmoke};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,3 +36,4 @@ a {
     color-scheme: dark;
   }
 }
+`;
