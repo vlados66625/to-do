@@ -32,7 +32,7 @@ type StyledInputProps = {
 
 export const StyledInput = styled.input.attrs<StyledInputProps>((props) => ({
   type: 'checkbox',
-  'aria-label': `${props.$labelText}`
+  'aria-label': `${props.$labelText}`,
 }))`
   ${visuallyHidden}
 
