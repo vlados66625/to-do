@@ -1,10 +1,14 @@
-import { TodosSection, TitleSection } from './styles';
+import { TodosSection, TitleSection, TitleContainer } from './styles';
 import TodoApp from './components/todo-app/todo-app';
+import ThemeButton from './components/theme-button/theme-button';
 
 export default function Home() {
   return (
     <TodosSection>
-      <TitleSection>todos</TitleSection>
+      <TitleContainer>
+        <TitleSection>todos</TitleSection>
+        <ThemeButton />
+      </TitleContainer>
       <TodoApp />
     </TodosSection>
   );

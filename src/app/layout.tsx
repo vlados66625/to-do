@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import StyledComponentsRegistry from './lib/registry';
 import { GlobalStyle } from './styles/global-style';
+import { ContextProvider } from './components/context-provider/context-provider';
 
 const rubik = Rubik({
   variable: '--font-rubik-sans',
@@ -23,8 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${rubik.variable}`}>
         <StyledComponentsRegistry>
-          <GlobalStyle />
-          {children}
+          <ContextProvider>
+            <GlobalStyle />
+            {children}
+          </ContextProvider>
         </StyledComponentsRegistry>
       </body>
     </html>

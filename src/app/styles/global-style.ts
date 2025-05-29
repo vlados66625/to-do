@@ -1,7 +1,6 @@
 'use client';
 
 import { createGlobalStyle } from 'styled-components';
-import { colorGraniteGrey, colorWhiteSmoke } from '../../const/const-colors';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -14,8 +13,8 @@ body {
 body {
   font-family: var(--font-rubik-sans);
   margin: 0;
-  color: ${colorGraniteGrey};
-  background: ${colorWhiteSmoke};
+  color: ${(props)=> props.theme.textColor};
+  background: ${(props)=> props.theme.backgroundColor};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

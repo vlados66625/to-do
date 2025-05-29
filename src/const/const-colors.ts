@@ -6,3 +6,5 @@ export const colorWhiteSmoke = '#F6F4F4';
 export const colorGainsboro = '#D8D8D8';
 export const colorRed = '#ff0000';
 export const chartreuse = '#7FFF00';
+export const veryLightGrey = '#CACACA';
+export const lima = '#69B61D';

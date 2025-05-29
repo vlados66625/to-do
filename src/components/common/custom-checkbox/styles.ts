@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { visuallyHidden } from '../../mixins/visually-hidden';
-import { colorDarkGray } from '../../../const/const-colors';
 
 export const StyledLabel = styled.label`
   display: flex;
@@ -11,6 +10,7 @@ export const StyledLabel = styled.label`
   cursor: pointer;
   line-height: 1.3;
   user-select: none;
+  color: ${(props)=> props.theme.textColor};
 
   &:hover {
     opacity: 0.6;
@@ -50,7 +50,7 @@ export const PseudoCheckbox = styled.span`
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  outline: 1px solid ${colorDarkGray};
+  outline: 1px solid ${(props)=> props.theme.textColor};
 
   @media (min-width: 768px) {
     width: 35px;
